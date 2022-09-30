@@ -1,0 +1,21 @@
+.container {
+  padding: 0 20px;
+  margin: 0 auto;
+  max-width: 1400px;
+
+  @media (min-width: 600px) {
+    padding: 0 40px;
+  }
+
+  @media (min-width: $media-tablet) {
+    padding: 0 60px;
+  }
+
+  @media (min-width: $media-tablet-landscape) {
+    padding: 0 80px;
+  }
+
+  @media (min-width: $media-desktop) {
+    padding: 0 110px;
+  }
+}

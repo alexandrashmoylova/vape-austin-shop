@@ -1,0 +1,26 @@
+{% set categoriesList = [{
+  title: 'Starter Kits',
+  class: 'starter-kits',
+  modificator: '--current',
+  description: 'Austin Vape and Smoke offers many types of vaping starter kits from the best companies such as JUUL, PHIX,
+Blankz, Suorin, and Smok. '
+}] %}
+{% for category in categoriesList %}
+<section class="category">
+    <div class="category__note">Free shipping when you order $75 or more</div>
+    <div class="category__container {{ category.class }} container">
+        <header class="category__header">
+            <ul class="breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="index.html">Main</a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link breadcrumbs__link{{ category.modificator }}" href="">{{ category.title }}</a>
+                </li>
+            </ul>
+            <h1 class="category__title">{{ category.title }}</h1>
+            <p class="category__description">{{ category.description }}</p>
+        </header>
+    </div>
+{% endfor %}
+</section>

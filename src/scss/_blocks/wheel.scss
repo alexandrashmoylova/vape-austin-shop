@@ -1,0 +1,180 @@
+.wheel {
+  // display: none;
+  background: linear-gradient(234.5deg, #2587ff 1.91%, #2764ff 74.47%) no-repeat;
+  min-width: 320px;
+  width: 100%;
+  max-width: 980px;
+
+  &__container {
+    padding-top: 20px;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $media-tablet-landscape) {
+      align-items: center;
+    }
+
+    @media (min-width: $media-tablet-landscape) {
+      flex-direction: row;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    position: relative;
+  }
+
+  &__link-logo {
+    cursor: pointer;
+    display: block;
+    height: 40px;
+    width: 140px;
+  }
+
+  &__logo-mobile {
+    @media (min-width: $media-tablet-landscape) {
+      display: none;
+    }
+  }
+
+  &__logo-desktop {
+    @media (max-width: 1023px) {
+      display: none;
+    }
+  }
+
+  &__title {
+    font-family: $font-decorative-family;
+    font-size: 45px;
+    font-weight: 700;
+    line-height: calc(40 / 45);
+    margin: 0;
+    margin-bottom: 15px;
+    padding-top: 39px;
+    text-transform: capitalize;
+    text-align: center;
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: calc(24 / 18);
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  &__note {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: calc(20 / 14);
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__form {
+    max-width: 334px;
+  }
+
+  &__btn {
+    font-size: 16px;
+    margin-bottom: 25px;
+    padding: 10px;
+  }
+
+  &__close {
+    cursor: pointer;
+    display: flex;
+    align-self: flex-end;
+  }
+
+  &__close-text {
+    font-weight: 400;
+    line-height: calc(20 / 16);
+    margin: 0;
+    margin-right: 12px;
+    text-transform: uppercase;
+    text-align: right;
+  }
+
+  &__close-btn {
+    height: 16px;
+    position: relative;
+    width: 16px;
+
+    &::before,
+    &::after {
+      content: "";
+      background-color: $color-text;
+      border-radius: 1px;
+      position: absolute;
+      top: 8px;
+      right: 0;
+      height: 2px;
+      width: 100%;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+  }
+
+  &__box {
+    min-height: 540px;
+    min-width: 540px;
+    height: 540px;
+    width: 540px;
+    position: relative;
+
+    &::before {
+      content: "";
+      background: url("/img/svg/wheel-btn.svg") no-repeat;
+      position: absolute;
+      right: 174px;
+      top: 30%;
+      height: 90px;
+      width: 45px;
+      z-index: 1;
+
+      @media (min-width: 600px) {
+        right: 36px;
+      }
+
+      @media (min-width: $media-tablet-landscape) {
+        top: 39%;
+        right: 90px;
+      }
+    }
+
+    @media (min-width: $media-tablet-landscape) {
+      order: -1;
+    }
+  }
+
+  &__spinner {
+    position: absolute;
+    top: -60px;
+    left: -25%;
+    width: 100%;
+
+    @media (min-width: 600px) {
+      left: 0;
+    }
+
+    @media (min-width: $media-tablet-landscape) {
+      left: -10%;
+      top: -10px;
+    }
+  }
+}

@@ -1,0 +1,96 @@
+{% set products = [{
+    link: 'product.html',
+    title: 'GuavaRoll Large',
+    ml: '25ml',
+    price: '$1.90',
+    img: {
+        src: {
+            mobile: '/img/popular-products/guava-roll.png',
+            mobile2x: '/img/popular-products/guava-roll@2x.png 2x',
+            desktop: '/img/popular-products/guava-roll-desktop.png',
+            desktop2x: '/img/popular-products/guava-roll-desktop@2x.png 2x'
+        }
+    }
+},
+{
+    link: 'product.html',
+    title: 'GuavaRoll Large',
+    ml: '25ml',
+    price: '$1.90',
+    img: {
+        src: {
+            mobile: '/img/popular-products/vape-oil.png',
+            mobile2x: '/img/popular-products/vape-oil@2x.png 2x',
+            desktop: '/img/popular-products/vape-oil-desktop.png',
+            desktop2x: '/img/popular-products/vape-oil-desktop@2x.png 2x'
+        }
+    }
+}] %}
+<section class="popular-products">
+    <div class="container popular-products__container">
+        <h2 class="popular-products__heading">Our most popular products</h2>
+        <div class="popular-products__filters">
+            <h2 class="u-visuallyhidden">Filter products</h2>
+            <form class="products-filters" action="#" method="get">
+                <div class="products-filters__filter">
+                    <input class="products-filters__filter-input u-visuallyhidden" type="radio" name="product-filter"
+                        id="filter-all" value="all" checked>
+                    <label class="products-filters__filter-label" for="filter-all">All</label>
+                </div>
+                <div class="products-filters__filter">
+                    <input class="products-filters__filter-input u-visuallyhidden" type="radio" name="product-filter"
+                        id="filter-starter-kits" value="starter-kits">
+                    <label class="products-filters__filter-label" for="filter-starter-kits">Starter Kits</label>
+                </div>
+                <div class="products-filters__filter">
+                    <input class="products-filters__filter-input u-visuallyhidden" type="radio" name="product-filter"
+                        id="filter-vape-juices" value="vape-juices">
+                    <label class="products-filters__filter-label" for="filter-vape-juices">Vape Juices</label>
+                </div>
+                <div class="products-filters__filter">
+                    <input class="products-filters__filter-input u-visuallyhidden" type="radio" name="product-filter"
+                        id="filter-vape-devices" value="vape-devices">
+                    <label class="products-filters__filter-label" for="filter-vape-devices">Vape Devices</label>
+                </div>
+                <div class="products-filters__filter">
+                    <input class="products-filters__filter-input u-visuallyhidden" type="radio" name="product-filter"
+                        id="filter-vax-devices" value="vax-devices">
+                    <label class="products-filters__filter-label" for="filter-vax-devices">Wax Devices</label>
+                </div>
+            </form>
+            <div class="popular-products__swiper swiper">
+                <button class="swiper__btn swiper__btn--left">
+                    <svg width="6" height="11">
+                        <use xlink:href="img/svg.svg#swiper-left"></use>
+                    </svg>
+                </button>
+                <button class="swiper__btn swiper__btn--right">
+                    <svg width="6" height="11">
+                        <use xlink:href="img/svg.svg#swiper-right"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="popular-products__wrapper">
+            <ul class="popular-products__list">
+                {% for index in range(4) %}
+                {% for product in products %}
+                <li class="popular-products__item">
+                    <a class="popular-products__link" href="{{ product.link }}">
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                                srcset="{{ product.img.src.desktop }}, {{ product.img.src.desktop2x }}">
+                            <img src="{{ product.img.src.mobile }}"
+                                srcset="{{ product.img.src.mobile2x }}" alt="">
+                        </picture>
+                        <h3 class="popular-products__title">{{ product.title }}</h3>
+                        <div class="popular-products__text">{{ product.ml }}</div>
+                        <div class="popular-products__price">{{ product.price }}</div>
+                    </a>
+                </li>
+                {% endfor %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,145 @@
+.locations {
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    background-image: url("/img/leave-locations.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    width: 163px;
+    height: 120px;
+    top: 63px;
+    left: -51px;
+  }
+
+  &__container {
+    width: 100%;
+    padding-top: 56px;
+    z-index: 5;
+
+    @media (min-width: $media-desktop) {
+      padding-top: 103px;
+    }
+  }
+
+  &__heading {
+    margin: 0;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: calc(35 / 30);
+    text-transform: uppercase;
+    padding-right: 20px;
+    margin-bottom: 30px;
+
+    @media (min-width: $media-desktop) {
+      font-size: 40px;
+      line-height: calc(44 / 40);
+      margin-bottom: 38px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: $media-tablet-landscape) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+  }
+
+  &__wrapper-list {
+    width: 100%;
+    margin-bottom: 45px;
+
+    @media (min-width: $media-tablet-landscape) {
+      padding: 0;
+      margin-right: 40px;
+      width: calc((100% - 40px) / 2);
+    }
+  }
+
+  &__list {
+    @include no-list;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @media (min-width: $media-tablet-landscape) {
+      margin-bottom: 52px;
+    }
+  }
+
+  &__item {
+    background-color: $color-text;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    position: relative;
+    max-width: 335px;
+
+    @media (min-width: $media-desktop) {
+      margin-bottom: 23px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: calc(19 / 16);
+    color: $color-bg;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  &__adress {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(17 / 14);
+    color: $color-bg;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: calc(15 / 13);
+    color: $color-bg;
+    opacity: 0.5;
+  }
+
+  &__btn-phone {
+    @media (min-width: $media-tablet-landscape) {
+      display: none;
+    }
+  }
+
+  &__btn-desktop {
+    text-align: left;
+
+    @media (max-width: 1023px) {
+      display: none;
+    }
+  }
+}

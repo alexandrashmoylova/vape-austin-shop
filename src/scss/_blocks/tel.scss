@@ -1,0 +1,13 @@
+.tel {
+  margin-bottom: 3px;
+
+  @media (min-width: $media-tablet-landscape) {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    margin-left: auto;
+  }
+
+  &__link {
+    text-align: left;
+  }
+}

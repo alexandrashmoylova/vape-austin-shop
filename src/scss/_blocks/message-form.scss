@@ -1,0 +1,77 @@
+.message-form {
+  max-width: 380px;
+
+  &__group {
+    border: none;
+    padding: 0;
+  }
+
+  &__inner {
+    margin-bottom: 12px;
+    position: relative;
+  }
+
+  &__field {
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    height: 50px;
+
+    &:focus {
+      border: 2px solid $color-green;
+    }
+  }
+
+  &__field::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(20 / 14);
+    padding-left: 32px;
+    padding-top: 5px;
+  }
+
+  &__inner--name::before,
+  &__inner--email::before,
+  &__inner--message::before {
+    content: "";
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 19px;
+    left: 11px;
+  }
+
+  &__inner--name::before {
+    background-image: url("/img/svg/user-icon1.svg");
+    width: 12px;
+    height: 11px;
+  }
+
+  &__inner--email::before {
+    background-image: url("/img/svg/at.svg");
+    width: 11px;
+    height: 12px;
+  }
+
+  &__inner--message::before {
+    background-image: url("/img/svg/message.svg");
+    width: 12px;
+    height: 8px;
+    top: 22px;
+  }
+
+  &__field--message {
+    padding-top: 14px;
+    min-height: 100px;
+    resize: none;
+  }
+
+  &__submit-btn {
+    font-size: 18px;
+    line-height: calc(50 / 18);
+
+    @media (min-width: $media-tablet-landscape) {
+      padding: 0;
+    }
+  }
+}

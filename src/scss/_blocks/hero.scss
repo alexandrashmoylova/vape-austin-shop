@@ -1,0 +1,203 @@
+.hero {
+  min-width: 320px;
+  padding-top: 193px;
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(24, 27, 25, 0%) 0%,
+      #181b19 100%
+    ),
+    url("/img/background/vape-left-bottom.png"),
+    url("/img/background/vape-right.png"),
+    url("/img/background/vape-center.png"),
+    url("/img/background/vape-left-top.png"),
+    url("/img/background/back-mobile.png");
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size:
+    auto,
+    auto,
+    auto,
+    auto,
+    auto,
+    cover;
+  background-position:
+    bottom center,
+    bottom 35% left,
+    bottom 68% right,
+    top 25% center,
+    top 26% left,
+    top -7px center;
+  max-width: 100%;
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+    only screen and (min-resolution: 144dpi) {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(24, 27, 25, 0%) 0%,
+        #181b19 100%
+      ),
+      url("/img/background/vape-left-bottom.png"),
+      url("/img/background/vape-right.png"),
+      url("/img/background/vape-center.png"),
+      url("/img/background/vape-left-top.png"),
+      url("/img/background/back-mobile@2x.png");
+  }
+
+  @media (min-width: $media-tablet) {
+    background-image:
+      linear-gradient(
+        180deg,
+        rgba(24, 27, 25, 0%) 0%,
+        #181b19 100%
+      ),
+      url("/img/background/vape-desktop-1.png"),
+      url("/img/background/vape-desktop-2.png"),
+      url("/img/background/vape-desktop-3.png"),
+      url("/img/background/vape-desktop-4.png"),
+      url("/img/background/back-desktop.png");
+    background-repeat: no-repeat;
+    background-size:
+      auto,
+      20%,
+      auto,
+      12%,
+      auto,
+      cover;
+    background-position:
+      bottom,
+      top 13% left 21%,
+      top 7% right 25%,
+      top 49% right 10%,
+      bottom 18% left 10%,
+      center;
+
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+      only screen and (min-resolution: 144dpi) {
+      background-image:
+        linear-gradient(
+          180deg,
+          rgba(24, 27, 25, 0%) 0%,
+          #181b19 100%
+        ),
+        url("/img/background/vape-desktop-1.png"),
+        url("/img/background/vape-desktop-2.png"),
+        url("/img/background/vape-desktop-3.png"),
+        url("/img/background/vape-desktop-4.png"),
+        url("/img/background/back-desktop@2x.png");
+    }
+  }
+
+  @media (min-width: $media-desktop) {
+    padding-top: 202px;
+  }
+
+  &::before {
+    content: "";
+    background-image: url("/img/background/green-leave2.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 216px;
+    left: -5px;
+    width: 143px;
+    height: 117px;
+
+    @media (min-width: $media-tablet-landscape) {
+      background-image: url("/img/background/leave-desktop.png");
+      width: 230px;
+      height: 188px;
+    }
+  }
+
+  &::after {
+    content: "";
+    background-image: url("/img/background/green-leave.png");
+    background-repeat: no-repeat;
+    width: 115px;
+    height: 188px;
+    position: absolute;
+    right: 0;
+    top: 216px;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__heading {
+    font-family: $font-decorative-family;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: calc(40 / 30);
+    text-align: center;
+    margin: 0 -20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+
+    @media (max-width: 1023px) {
+      max-width: 375px;
+    }
+
+    @media (min-width: $media-tablet-landscape) {
+      font-size: 44px;
+      line-height: 1;
+    }
+
+    b {
+      font-family: $font-base-family;
+      font-size: 55px;
+      font-weight: 900;
+      line-height: 1;
+      color: $color-orange;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+
+      @media (min-width: $media-tablet-landscape) {
+        font-size: 70px;
+        line-height: 1;
+        width: 494px;
+        margin-bottom: 18px;
+      }
+    }
+  }
+
+  &__wrapper-btn {
+    max-width: 100%;
+    margin-bottom: 25px;
+    z-index: 10;
+    width: 445px;
+
+    @media (min-width: $media-tablet-landscape) {
+      margin-bottom: 18px;
+    }
+  }
+
+  &__btn {
+    font-size: 16px;
+    line-height: calc(60 / 16);
+
+    @media (min-width: $media-tablet-landscape) {
+      font-size: 24px;
+      line-height: calc(60 / 24);
+      padding: 0;
+    }
+  }
+
+  &__wrapper {
+    max-width: 100%;
+    padding-right: 0;
+    margin-bottom: 40px;
+    width: 100%;
+
+    @media (min-width: $media-desktop) {
+      padding: 0 45px;
+      margin-bottom: 60px;
+    }
+  }
+}

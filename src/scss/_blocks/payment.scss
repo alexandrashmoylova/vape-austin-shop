@@ -1,0 +1,9 @@
+.payment {
+  margin-bottom: 37px;
+
+  @media (min-width: $media-tablet-landscape) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin: 0;
+  }
+}

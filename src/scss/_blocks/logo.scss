@@ -1,0 +1,31 @@
+.logo {
+  @media (min-width: $media-tablet-landscape) {
+    order: 1;
+  }
+
+  &__link {
+    display: block;
+    width: 142px;
+    height: 40px;
+    cursor: pointer;
+
+    @media (min-width: $media-tablet-landscape) {
+      width: 180px;
+      height: 111px;
+      order: 1;
+      margin: 0 auto;
+    }
+  }
+
+  &__mobile {
+    @media (min-width: $media-tablet-landscape) {
+      display: none;
+    }
+  }
+
+  &__desktop {
+    @media (max-width: 1023px) {
+      display: none;
+    }
+  }
+}

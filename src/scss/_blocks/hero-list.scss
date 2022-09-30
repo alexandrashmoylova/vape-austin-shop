@@ -1,0 +1,65 @@
+.hero-list {
+  @include no-list;
+
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  margin: 0 -20px 0 0;
+
+  @media (min-width: 600px) {
+    margin: 0;
+  }
+
+  @media (min-width: $media-tablet) {
+    overflow-x: hidden;
+    justify-content: space-between;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 auto;
+    margin-right: 47px;
+    padding-top: 30px;
+    position: relative;
+    width: 33%;
+
+    @media (min-width: 600px) {
+      margin-right: 34px;
+      width: 20%;
+    }
+
+    @media (min-width: $media-tablet-landscape) {
+      margin-right: 47px;
+    }
+
+    @media (min-width: $media-desktop) {
+      width: 17%;
+    }
+  }
+
+  &__item:last-child {
+    margin-right: 0;
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: calc(24 / 18);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 19px 0 7px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: calc(20 / 14);
+    margin: 0;
+  }
+}

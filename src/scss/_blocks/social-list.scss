@@ -1,0 +1,27 @@
+.social-list {
+  @include no-list;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  &__link {
+    display: block;
+    width: 94px;
+    height: 50px;
+    padding: 15px 37px;
+  }
+
+  &__item {
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &__item--instagram {
+    background-color: $color-pink;
+  }
+
+  &__item--facebook {
+    background-color: $color-blue;
+  }
+}

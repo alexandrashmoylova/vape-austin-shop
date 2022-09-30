@@ -1,0 +1,41 @@
+{% set items = [{
+  class: 'one',
+  title: 'Free shipping'
+},
+{
+  class: 'two',
+  title: '10% OFF on order right now'
+},
+{
+  class: 'three',
+  title: 'Lucky in love'
+},
+{
+  class: 'four',
+  title: 'No luck today'
+},
+{
+  class: 'five',
+  title: 'So close'
+},
+{
+  class: 'six',
+  title: 'Lucky next time'
+},
+{
+  class: 'seven',
+  title: '30% OFF on order right now'
+},
+{
+  class: 'eight',
+  title: 'Receive 10% off a single item'
+}] %}
+<div class="spinner">
+    <ul class="spinner__list">
+        {% for item in items %}
+        <li class="spinner__item spinner__item-{{ item.class }}">
+            <h3 class="spinner__title">{{ item.title }}</h3>
+        </li>
+        {% endfor %}
+    </ul>
+</div>

@@ -1,0 +1,35 @@
+{% set sortMenu = [{
+    title: 'Most Popular',
+    checked: 'checked'
+  },
+  {
+    title: 'Price low to high'
+  },
+  {
+    title: 'Price high to low'
+  },
+  {
+    title: 'On Sale'
+  },
+  {
+    title: 'New'
+  }] %}
+
+  <div class="sort-menu">
+    <button class="sort-menu__btn" type="button">
+        <span>Most popular</span>
+        <svg class="sort-menu__btn--up" width="4" height="3">
+            <use xlink:href="img/svg.svg#sort-arrow-up"></use>
+        </svg>
+        <svg class="sort-menu__btn--down" width="4" height="3">
+            <use xlink:href="img/svg.svg#sort-arrow-down"></use>
+        </svg>
+    </button>
+    <ul class="sort-menu__list">
+        {% for sortItem in sortMenu %}
+        <li class="sort-menu__item">
+            <a class="sort-menu__link">{{  sortItem.title  }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+  </div>

@@ -1,0 +1,17 @@
+.link {
+  display: block;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: calc(35 / 30);
+  text-transform: uppercase;
+  color: $color-green;
+  text-align: center;
+
+  &:hover {
+    color: $color-orange;
+  }
+
+  &:active {
+    color: $color-dark-orange;
+  }
+}

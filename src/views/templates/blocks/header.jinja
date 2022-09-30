@@ -1,0 +1,37 @@
+<header class="header header--nojs {% if isHomePage %}header--home{% endif %}">
+    <div class=" container header__container">
+        <div class="logo">
+            <a class="logo__link" href="index.html" aria-label="logo AVS">
+                <img class="logo__mobile" src="/img/logo/logo-mobile.png"
+                    srcset="/img/logo/logo-mobile@2x.png 2x" width="142" height="40" alt="logo AVS" />
+                <img class="logo__desktop" src="/img/logo/logo-desktop.png"
+                    srcset="/img/logo/logo-desktop@2x.png 2x" width="180" height="111" alt="logo AVS" />
+            </a>
+        </div>
+        <div class="account-list">
+            <a class="account-list__item account-list__item--user" href="#" target="_blank" rel="noopener nofollow">
+                <svg width="25" height="25">
+                    <use class="account-list__icon" xlink:href="img/svg.svg#user-icon"></use>
+                </svg>
+                <span class="u-visuallyhidden">My account</span>
+            </a>
+            <a class="account-list__item account-list__item--cart" href="#" target="_blank" rel="noopener nofollow">
+                <svg width="25" height="25">
+                    <use xlink:href="img/svg.svg#shopping-cart"></use>
+                </svg>
+                <span class="u-visuallyhidden">My cart</span>
+                <span class="account-list__item-counter">0</span>
+            </a>
+            <button class="trigger" type="button">
+                <span></span>
+            </button>
+        </div>
+        <div class="header__wrapper"></div>
+        <nav class="nav">
+            <div class="nav__dropdown">
+                {% include "templates/blocks/nav-dropdown.jinja" %}
+            </div>
+        </nav>
+        {% include "templates/blocks/nav-search.jinja" %}
+    </div>
+</header>

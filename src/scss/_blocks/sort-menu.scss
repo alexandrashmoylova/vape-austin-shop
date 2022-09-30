@@ -1,0 +1,67 @@
+.sort-menu {
+  &__btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: $color-text;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: calc(21 / 13);
+    position: relative;
+    padding: 0;
+
+    &--up,
+    &--down {
+      position: absolute;
+      right: -7px;
+    }
+
+    &--up {
+      top: 7px;
+    }
+
+    &--down {
+      top: 12px;
+    }
+  }
+
+  &__list {
+    @include no-list;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    padding: 20px 0 15px;
+    position: relative;
+
+    &::after {
+      content: "";
+      background-color: $color-text;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      top: 50px;
+      opacity: 0.1;
+      width: 90%;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+
+  &__link {
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: calc(17 / 14);
+    text-transform: capitalize;
+
+    &:hover {
+      color: $color-orange;
+    }
+  }
+}

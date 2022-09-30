@@ -1,0 +1,35 @@
+.breadcrumbs {
+  @include no-list;
+
+  display: flex;
+  margin-bottom: 20px;
+
+  &__item {
+    margin-right: 15px;
+    position: relative;
+
+    &:first-child::after {
+      content: "/";
+      color: $color-bg;
+      font-size: 14px;
+      margin: 0 5px;
+      position: absolute;
+      left: 30px;
+      top: 2px;
+    }
+  }
+
+  &__link {
+    color: $color-bg;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: calc(20 / 14);
+    text-decoration: none;
+
+    &--current {
+      opacity: 0.6;
+    }
+  }
+}

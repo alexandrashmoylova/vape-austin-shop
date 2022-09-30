@@ -1,0 +1,71 @@
+{#
+  Ниже пример работы с jinja шаблонами
+
+  Строчка extends "templates/layout.jinja" указывает, что мы расширяем шаблон layout.jinja
+  Шаблон layout будет основным
+
+  Внутри конструкции {% block content %} размещаем контент, которым мы хотим заполнить блок с таким же названием в основном шаблоне
+  Блоков может быть несколько
+
+  Строчка include "templates/blocks/hero.jinja" подключает файл hero.jinja, который лежит в папке templates/blocks/
+
+  Итого, при рендере шаблона (превращания его в html) произойдут следующие шаги:
+  1. Сначала вместо строчки "{% include "templates/blocks/hero.jinja" %}" подставится содержимое файла templates/blocks/hero.jinja
+  2. Потом всё, что получилось внутри блока content (содержимое между "{% block content %}" и "{% endlock %}") в этом файле подставится в основной шаблон
+  3. В layout.jinja будет найдена строка "{% block content %}{% endlock %}", которая заменится получившимся в шаге 2 контентом
+
+  Эти простые конструкции позволяют не дублировать контент и проще создавать новые страницы
+
+  Подробная документация по Jinja, которая будет полезна frontend-разработчику – https://jinja.palletsprojects.com/en/3.0.x/templates/
+#}
+
+{# Ставим флажок, что это главная страница, чтобы отображать header другим на главной #}
+{% set isHomePage = true %}
+{% extends "templates/layout.jinja" %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+  {#
+    Внутри шаблона hero.jinja описать первый блок и продолжить также заполнять страницу по блокам
+
+    Главная страница состоит из:
+    - Блок Hero
+    - Блок Баннера с доставкой
+    - Блок Карты с магазинами
+    - Блок Категорий
+    - Блок Популярных продуктов (будет переиспользоваться)
+    - Блок подписки
+    …
+  #}
+  {% include "templates/blocks/hero.jinja" %}
+  {% include "templates/blocks/shipping.jinja" %}
+  {% include "templates/blocks/locations.jinja" %}
+  {% include "templates/blocks/categories.jinja" %}
+  {% include "templates/blocks/popular-products.jinja" %}
+  {% include "templates/blocks/subscribe.jinja" %}
+  {% include "templates/blocks/reviews.jinja" %}
+  {% include "templates/blocks/description.jinja" %}
+  {% include "templates/blocks/message-section.jinja" %}
+  {% include "templates/blocks/modal.jinja" %}
+  {% include "templates/blocks/modal-wheel.jinja" %}
+
+  {#
+    Можно также подключать одинаковые шаблоны с разными данными, которые передавать с страницы
+    Например, пусть у нас будет блок с отзывами. На главной одни, на карточке товара другие
+
+    Мы можем
+    1. На главной странице описать данные
+    {% set pageContent = {
+      reviews: [{
+        review: 'Первый отзыв'
+      }]
+    } %}
+
+    2. Подключить общий блок с отзывами, прокинув туда нужные данные
+    {% call macros.includeComponent("templates/blocks/reviews.jinja", data=pageContent.reviews) %}{% endcall %}
+
+    3. Таким образом можно переиспользовать один и тот же блок на разных страницах с разными данными
+  #}
+
+{% endblock %}

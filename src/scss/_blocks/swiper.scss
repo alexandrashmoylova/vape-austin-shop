@@ -1,0 +1,14 @@
+.swiper {
+  &__btn {
+    width: 30px;
+    height: 30px;
+    background-color: #292a2e;
+    border-radius: 5px;
+    padding: 0;
+    border: none;
+
+    &:hover {
+      background-color: $color-dark-orange;
+    }
+  }
+}

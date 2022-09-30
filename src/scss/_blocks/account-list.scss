@@ -1,0 +1,66 @@
+.account-list {
+  @include no-list;
+
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  @media (min-width: $media-tablet) {
+    margin-left: auto;
+  }
+
+  @media (min-width: 600px) {
+    order: 3;
+  }
+
+  &__item {
+    text-decoration: none;
+    display: block;
+    color: $color-text;
+    margin-right: 37px;
+    position: relative;
+
+    &--user {
+      @media (min-width: $media-tablet-landscape) {
+        margin-right: 25px;
+      }
+    }
+
+    &--cart {
+      @media (min-width: $media-tablet-landscape) {
+        margin-right: 0;
+      }
+    }
+
+    svg {
+      stroke: $color-text;
+
+      &:hover {
+        stroke: $color-orange;
+      }
+    }
+  }
+
+  &__item-counter {
+    font-size: 10px;
+    line-height: 1;
+    color: $color-text;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: -3px;
+
+    &::before {
+      content: "";
+      background-color: $color-orange;
+      border-radius: 50%;
+      width: 15px;
+      height: 15px;
+      position: absolute;
+      right: -4px;
+      top: -3px;
+      z-index: -1;
+    }
+  }
+}

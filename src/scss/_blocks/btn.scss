@@ -1,0 +1,21 @@
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-text;
+  cursor: pointer;
+  font-weight: 900;
+  background: linear-gradient(267.88deg, #358f6e 0.99%, #7fbf72 99.77%);
+  border-radius: 5px;
+  width: 100%;
+  text-align: center;
+  border: none;
+
+  &:hover {
+    background: linear-gradient(267.88deg, #7fbf72 0.99%, #358f6e 99.77%);
+  }
+
+  &:active {
+    background: #38916e;
+  }
+}

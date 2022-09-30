@@ -1,0 +1,88 @@
+.subscribe {
+  min-width: 320px;
+  background-image: linear-gradient(234.5deg, #f84444 1.91%, #f5a623 100%);
+  background-repeat: no-repeat;
+
+  &__container {
+    padding-top: 30px;
+    padding-bottom: 44px;
+    padding-right: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    &::before {
+      content: "";
+      background-image: url("/img/leave1-reviews.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      width: 167px;
+      height: 165px;
+      bottom: -104px;
+      right: -6px;
+    }
+
+    @media (min-width: 600px) {
+      padding-top: 38px;
+    }
+
+    @media (min-width: $media-tablet-landscape) {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  &__inner-title {
+    margin-bottom: 20px;
+
+    @media (min-width: 600px) and (max-width: 1199px) {
+      width: 50%;
+      padding-right: 25px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-family: $font-decorative-family;
+    font-weight: 700;
+    font-size: 33px;
+    line-height: calc(40 / 33);
+    max-width: 482px;
+    text-transform: capitalize;
+
+    @media (min-width: 600px) and (max-width: $media-tablet-landscape) {
+      margin-bottom: 0;
+      font-size: 33px;
+      line-height: calc(50 / 33);
+    }
+
+    @media (min-width: $media-desktop) {
+      padding-right: 70px;
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 397px;
+
+    @media (min-width: $media-tablet-landscape) {
+      padding-left: 18px;
+    }
+
+    @media (min-width: $media-desktop) {
+      width: 397px;
+    }
+  }
+
+  &__btn {
+    font-size: 18px;
+    line-height: calc(50 / 18);
+
+    @media (min-width: $media-tablet-landscape) {
+      padding: 0;
+    }
+  }
+}

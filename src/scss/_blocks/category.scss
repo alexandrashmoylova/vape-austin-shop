@@ -1,0 +1,63 @@
+.category {
+  padding-top: 180px;
+
+  &__container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+
+    &::after {
+      content: "";
+      background: url("/img/category-back/leave-top.png") no-repeat;
+      height: 109px;
+      position: absolute;
+      top: 0;
+      right: -41px;
+      width: 125px;
+    }
+  }
+
+  &__note {
+    background: linear-gradient(234.5deg, #2764ff 1.91%, #2587ff 100%);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+  }
+
+  &__title {
+    color: $color-bg;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: calc(35 / 30);
+    margin: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    color: $color-bg;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: calc(20 / 14);
+    margin: 0;
+    padding-right: 52px;
+  }
+}
+
+.starter-kits {
+  background:
+    url("/img/category-back/vape-right.png") no-repeat,
+    url("/img/category-back/leave-right.png") no-repeat,
+    url("/img/category-back/vape-top.png") no-repeat,
+    url("/img/category-back/leave-bottom.png") no-repeat,
+    linear-gradient(101.17deg, #f5e0ba 0%, #ffbb3f 98.85%);
+  background-position:
+    top 60% right,
+    top 73% right,
+    top right 15%,
+    bottom right 2%;
+}

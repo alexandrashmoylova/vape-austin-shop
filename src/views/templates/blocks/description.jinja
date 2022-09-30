@@ -1,0 +1,90 @@
+{% set pictures = [{
+    img: '/img/gallery/image1.png',
+    imgRetina: '/img/gallery/image1@2x.png 2x',
+    imgDesktop: '/img/gallery/image1-desktop.png',
+    imgDesktopRetina: '/img/gallery/image1-desktop@2x.png 2x',
+    alt: 'Pipe'
+},
+{
+    img: '/img/gallery/image2.png',
+    imgRetina: '/img/gallery/image2@2x.png 2x',
+    imgDesktop: '/img/gallery/image2-desktop.png',
+    imgDesktopRetina: '/img/gallery/image2-desktop@2x.png 2x',
+    alt: 'Vape Flavours'
+},
+{
+    img: '/img/gallery/image3.png',
+    imgRetina: '/img/gallery/image3@2x.png 2x',
+    imgDesktop: '/img/gallery/image3-desktop.png',
+    imgDesktopRetina: '/img/gallery/image3-desktop@2x.png 2x',
+    alt: 'Vape Oil'
+},
+{
+    img: '/img/gallery/image4.png',
+    imgRetina: '/img/gallery/image4@2x.png 2x',
+    imgDesktop: '/img/gallery/image4-desktop.png',
+    imgDesktopRetina: '/img/gallery/image4-desktop@2x.png 2x',
+    alt: 'Man'
+},
+{
+    img: '/img/gallery/image5.png',
+    imgRetina: '/img/gallery/image5@2x.png 2x',
+    imgDesktop: '/img/gallery/image5-desktop.png',
+    imgDesktopRetina: '/img/gallery/image5-desktop@2x.png 2x',
+    alt: 'Vape Goods'
+},
+{
+    img: '/img/gallery/image6.png',
+    imgRetina: '/img/gallery/image6@2x.png 2x',
+    imgDesktop: '/img/gallery/image6-desktop.png 1x',
+    imgDesktopRetina: '/img/gallery/image6-desktop@2x.png 2x',
+    alt: 'Souvenir'
+},
+{
+    img: '/img/gallery/image7.png',
+    imgRetina: '/img/gallery/image7@2x.png 2x',
+    imgDesktop: '/img/gallery/image7-desktop.png',
+    imgDesktopRetina: '/img/gallery/image7-desktop@2x.png 2x',
+    alt: 'Vape Oil'
+},
+{
+    img: '/img/gallery/image8.png',
+    imgRetina: '/img/gallery/image8@2x.png 2x',
+    imgDesktop: '/img/gallery/image8-desktop.png',
+    imgDesktopRetina: '/img/gallery/image8-desktop@2x.png 2x',
+    alt: 'Raw Paper'
+},
+{
+    img: '/img/gallery/image9.png',
+    imgRetina: '/img/gallery/image9@2x.png 2x',
+    imgDesktop: '/img/gallery/image9-desktop.png',
+    imgDesktopRetina: '/img/gallery/image9-desktop@2x.png 2x',
+    alt: 'Woman'
+}
+]%}
+<section class="description">
+    <div class="container description__container">
+        <h2 class="description__title">Welcome To Our Family</h2>
+        <p class="description__text">Austin Vape and Smoke is a one-of-a-kind vape shop in the heart of Austin, TX. We
+            initially opened our smoke shop when we saw consumer demand for vaporizers and liquids that just wasn't
+            being met.</p>
+        <div class="description-gallery">
+            {% for index in range(2) %}
+            {% for picture in pictures %}
+            <div class="description-gallery__item">
+                <picture>
+                    <source media="(min-width: 1200px)" srcset="{{ picture.imgDesktop }}, {{ picture.imgDesktopRetina }}">
+                    <img src="{{ picture.img }}" srcset="{{ picture.imgRetina }}" width="125" height="125" alt="{{ picture.alt }}">
+                </picture>
+            </div>
+            {% endfor %}
+            {% endfor %}
+        </div>
+        <div class="description__wrapper">
+            <svg class="description__logo" width="22" height="20" role="img">
+                <use xlink:href="img/svg.svg#green-heart"></use>
+            </svg>
+            <a class="description__link link" href="#">Like & Follow</a>
+        </div>
+        </div>
+</section>

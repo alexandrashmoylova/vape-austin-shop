@@ -1,0 +1,48 @@
+{% set categories = [{
+  link: 'category.html',
+  title: 'Starter Kits',
+  class: 'starter-kits-item'
+},
+{
+  link: '#',
+  title: 'Vape Juices',
+  class: 'vape-juices-item'
+},
+{
+  link: '#',
+  title: 'Nic Salt eJuice',
+  class: 'nic-salt-item'
+},
+{
+  link: '#',
+  title: 'Vape Devices',
+  class: 'vape-devices-item'
+},
+{
+  link: '#',
+  title: 'Wax Devices',
+  class: 'wax-devices-item'
+},
+{
+  link: '#',
+  title: 'DIV Herb Vaporizes',
+  class: 'div-herb-item'
+},
+{
+  link: '#',
+  title: 'Accessoriess',
+  class: 'accessories-item'
+}] %}
+<section class="categories">
+    <div class="container categories__container">
+        <h2 class="categories__heading">We Have All You Need For Vaping</h2>
+        <ul class="categories__list">
+                  {% for category in categories %}
+                  <li class="categories__item {{ category.class }}">
+                    <a class="categories__link" href="{{ category.link }}">
+                        <h3 class="categories__title">{{ category.title }}</h3></a>
+                  </li>
+                  {% endfor %}
+        </ul>
+    </div>
+</section>

@@ -1,0 +1,81 @@
+@import "_variables.base";
+@import "_mixins";
+@import "_fonts";
+
+/*
+  Import vendor libraries
+*/
+@import "vendor/_normalize";
+
+/*
+  Import utils classes and base styles
+*/
+@import "_utils";
+@import "_base";
+
+/*
+  Import all other blocks
+*/
+// @import "_blocks/container";
+@import "_blocks/wrapper";
+@import "_blocks/container";
+@import "_blocks/header";
+@import "_blocks/logo";
+@import "_blocks/account-list";
+@import "_blocks/trigger";
+@import "_blocks/nav";
+@import "_blocks/nav-search";
+@import "_blocks/hero";
+@import "_blocks/hero-list";
+@import "_blocks/btn";
+@import "_blocks/link";
+@import "_blocks/shipping";
+@import "_blocks/locations";
+@import "_blocks/map";
+@import "_blocks/categories";
+@import "_blocks/popular-products";
+@import "_blocks/products-filters";
+@import "_blocks/swiper";
+@import "_blocks/subscribe";
+@import "_blocks/form-email";
+@import "_blocks/reviews";
+@import "_blocks/google-rating";
+@import "_blocks/reviews-slider";
+@import "_blocks/description";
+@import "_blocks/description-gallery";
+@import "_blocks/message-section";
+@import "_blocks/message-form";
+@import "_blocks/modal";
+@import "_blocks/wheel";
+@import "_blocks/footer";
+@import "_blocks/footer-nav";
+@import "_blocks/tel";
+@import "_blocks/open-time";
+@import "_blocks/social-list";
+@import "_blocks/payment";
+@import "_blocks/copyright";
+@import "_blocks/company-name";
+@import "_blocks/category";
+@import "_blocks/breadcrumbs";
+@import "_blocks/sort";
+@import "_blocks/sort-category";
+@import "_blocks/sort-category";
+@import "_blocks/sort-menu";
+
+/*
+  Ниже пример подключения других блоков
+
+  Каждый новый файл должен отвечать за конкретный блок в терминах БЭМ
+  (https://ru.bem.info/methodology/key-concepts/#%D0%B1%D0%BB%D0%BE%D0%BA)
+  Список блоков перечислил в файле views/index.jinja
+
+  Для именования селекторов давайте придерживаться стиля two dashes
+  (https://ru.bem.info/methodology/naming-convention/#%D1%81%D1%82%D0%B8%D0%BB%D1%8C-two-dashes)
+  block-name__element-name--modificator
+*/
+
+/*
+  Код ниже нужно удалить, он добавлен просто для примера
+  Не стал выносить в отдельный файл, но если бы блок coming-soon действительно был бы нужен,
+  то он должен был бы быть в файле _blocks/coming-soon.scss
+*/

@@ -1,0 +1,38 @@
+<ul class="nav__list nav__list--main">
+    <li class="nav__item nav__item--products">
+        <a class="nav__link nav__link--main nav__link--products" href="#">Products
+            <span class="nav__arrow nav__arrow--down">
+                <svg width="12" height="8">
+                    <use xlink:href="img/svg.svg#arrow-down"></use>
+                </svg>
+            </span>
+        </a>
+        {% include "templates/blocks/nav-list-lvl2.jinja" %}
+    </li>
+    <li class="nav__item nav__item--main">
+        <a class="nav__link nav__link--main" href="#">About Us</a>
+    </li>
+    <li class="nav__item nav__item--main">
+        <a class="nav__link nav__link--main" href="#">Our Blog</a>
+    </li>
+    <li class="nav__item nav__item--main">
+        <a class="nav__link nav__link--main" href="#">Gallery</a>
+    </li>
+    <li class="nav__item nav__item--main">
+        <a class="nav__link nav__link--main" href="#">Contact Us</a>
+    </li>
+    <li class="nav__item nav__item--main nav__item--user">
+        <a class="nav__link nav__link--main" href="#">Account Details</a>
+    </li>
+    <li class="nav__item nav__item--main nav__item--user">
+        <a class="nav__link nav__link--main" href="#">My Cart</a>
+    </li>
+</ul>
+<div class="nav__contacts">
+    <p class="nav__contacts-text">Call Us</p>
+    <a class="nav__contacts-tel link" href="tel:5125510420" aria-label="Our phone number">512-551-0420</a>
+    <a class="nav__button btn">Contact us today</a>
+</div>
+<div class="nav__social">
+    {% include "templates/blocks/social-list.jinja" %}
+</div>

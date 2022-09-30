@@ -1,0 +1,16 @@
+.products-slider__btn {
+  width: 30px;
+  height: 30px;
+  background-color: #292a2e;
+  border-radius: 5px;
+}
+
+.products-slider__btn--left::before {
+  content: "";
+  background-image: url("/img/svg/sprite_b.svg");
+  background-repeat: no-repeat;
+  background-position: -85px -130px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

@@ -1,0 +1,27 @@
+{% set sortList = [{
+  title: 'All',
+  checked: 'checked'
+},
+{
+  title: 'Vape Box-Mod Kit'
+},
+{
+  title: 'Pod Systems'
+},
+{
+  title: 'Disposable Vapes'
+}] %}
+<section class="sort">
+    <div class="sort__container container">
+        <form class="sort-category" action="#" method="get">
+            {% for item in sortList %}
+            <div class="sort-category__item">
+                <input class="sort-category__input u-visuallyhidden" type="radio" name="sort-category"
+                    id="sort-category-all" value="All" {{ item.checked }}>
+                <label class="sort-category__label" for="sort-category-all">{{ item.title }}</label>
+            </div>
+            {% endfor %}
+        </form>
+        {% include "templates/blocks/sort-menu.jinja" %}
+    </div>
+</section>

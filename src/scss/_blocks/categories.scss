@@ -1,0 +1,256 @@
+.categories {
+  min-width: 320px;
+
+  &__container {
+    padding-top: 68px;
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $media-tablet-landscape) {
+      padding-top: 88px;
+    }
+  }
+
+  &__heading {
+    margin: 0;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: calc(35 / 30);
+    text-transform: uppercase;
+    margin-bottom: 27px;
+
+    @media (min-width: $media-tablet-landscape) {
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: $media-desktop) {
+      font-size: 40px;
+      line-height: calc(35 / 40);
+    }
+  }
+
+  &__list {
+    @include no-list;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @media (min-width: 600px) and (max-width: $media-tablet-landscape) {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    @media (min-width: $media-tablet-landscape) {
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+
+  &__item {
+    height: 130px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    min-width: 250px;
+    transition: background-position 0.5s ease-out;
+
+    @media (max-width: 600px) {
+      width: 100%;
+    }
+
+    @media (min-width: 600px) and (max-width: 1023px) {
+      width: calc((100% - 20px) / 2);
+      margin-right: auto;
+    }
+
+    @media (min-width: $media-tablet-landscape) {
+      width: calc((100% - 80px) / 3);
+      margin-bottom: 20px;
+    }
+  }
+
+  &__item:nth-child(-n + 3) {
+    @media (min-width: 1400px) {
+      width: calc((100% - 80px) / 3);
+    }
+  }
+
+  &__item:nth-child(n + 4) {
+    @media (min-width: 1400px) {
+      width: calc((100% - 80px) / 4);
+    }
+  }
+
+  &__item:last-child {
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+
+  &__link {
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    margin: auto;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: calc(26 / 20);
+    color: $color-bg;
+    text-align: center;
+  }
+}
+
+.starter-kits-item {
+  background-image:
+    url("/img/catalog/starter-kits-left.png"),
+    url("/img/catalog/starter-kits-bottom.png"),
+    url("/img/catalog/starter-kits-top.png"),
+    linear-gradient(101.17deg, #f5e0ba 0%, #ffbb3f 98.85%);
+  background-position:
+    bottom left,
+    bottom right,
+    top right;
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    no-repeat;
+
+  &:hover {
+    background-position:
+      bottom left -60%,
+      bottom -100% right,
+      top -100% right;
+  }
+}
+
+.vape-juices-item {
+  background-image:
+    url("/img/catalog/vapej-left.png"),
+    url("/img/catalog/vapej-top.png"),
+    url("/img/catalog/vapej-right.png"),
+    linear-gradient(180deg, #dce5a4 0%, #dded7a 100%);
+  background-repeat: no-repeat;
+  background-position:
+    bottom left,
+    top center,
+    top right;
+
+  &:hover {
+    background-position:
+      bottom left -60%,
+      top -110% center,
+      top right -100%;
+  }
+}
+
+.nic-salt-item {
+  background-image:
+    url("/img/catalog/nic-left.png"),
+    url("/img/catalog/nic-top.png"),
+    url("/img/catalog/nic-right-small.png"),
+    url("/img/catalog/nic-right-big.png"),
+    linear-gradient(98.44deg, #e6cdff 3.89%, #b366ff 95.06%);
+  background-repeat: no-repeat;
+  background-position:
+    bottom left,
+    top left 27px,
+    bottom right,
+    bottom right;
+
+  &:hover {
+    background-position:
+      bottom left -60%,
+      top left -110%,
+      bottom right -100%,
+      top right -100%;
+  }
+}
+
+.vape-devices-item {
+  background-image:
+    url("/img/catalog/vaped-bottom.png"),
+    url("/img/catalog/vaped-top.png"),
+    linear-gradient(166.62deg, #64b3ff 9.61%, #b6dbfc 101.26%);
+  background-repeat: no-repeat;
+  background-position:
+    bottom left,
+    top right;
+
+  &:hover {
+    background-position:
+      bottom left -180%,
+      top right -100%;
+  }
+}
+
+.wax-devices-item {
+  background-image:
+    url("/img/catalog/wax-left.png"),
+    url("/img/catalog/wax-right.png"),
+    linear-gradient(99.16deg, #f6ad1c 0%, #ff9049 94.34%);
+  background-repeat: no-repeat;
+  background-position:
+    top left,
+    bottom right;
+
+  &:hover {
+    background-position:
+      bottom left -100%,
+      top right -100%;
+  }
+}
+
+.div-herb-item {
+  background-image:
+    url("/img/catalog/div-left.png"),
+    url("/img/catalog/div-top-right.png"),
+    url("/img/catalog/div-bottom-right.png"),
+    linear-gradient(101.72deg, #c1e2db 7.64%, #c1e2c2 81.38%);
+  background-repeat: no-repeat;
+  background-position:
+    bottom left,
+    top right,
+    bottom right;
+
+  &:hover {
+    background-position:
+      bottom left -180%,
+      top right -100%,
+      bottom right -140%;
+  }
+
+  @media (min-width: 600px) {
+    background-position:
+      bottom left -13%,
+      top right,
+      bottom right;
+  }
+}
+
+.accessories-item {
+  background-image:
+    url("/img/catalog/accses-left-bottom.png"),
+    url("/img/catalog/acces-cigare.png"),
+    url("/img/catalog/acces-tray.png"),
+    linear-gradient(98.31deg, #ffe7b8 1.2%, #ffd1c7 94.27%);
+  background-repeat: no-repeat;
+  background-position:
+    bottom left,
+    top left 60px,
+    bottom right;
+
+  &:hover {
+    background-position:
+      bottom left -100%,
+      top left -100%,
+      bottom right -100%;
+  }
+}

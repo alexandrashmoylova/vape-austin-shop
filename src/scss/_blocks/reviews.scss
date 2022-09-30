@@ -1,0 +1,127 @@
+.reviews {
+  min-width: 320px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 63px;
+    position: relative;
+    z-index: 5;
+
+    @media (min-width: $media-tablet-landscape) {
+      padding-top: 97px;
+    }
+
+    &::before {
+      content: "";
+      background-image: url("/img/leave2-reviews.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      position: absolute;
+      z-index: -1;
+      width: 118px;
+      height: 55px;
+      top: 182px;
+      right: 10px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: calc(35 / 30);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+
+    @media (min-width: $media-tablet-landscape) {
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $media-desktop) {
+      font-size: 40px;
+      line-height: calc(35 / 40);
+    }
+  }
+
+  &__rating-link {
+    text-decoration: none;
+  }
+
+  &__list {
+    @include no-list;
+
+    display: flex;
+    overflow-x: auto;
+  }
+
+  &__list::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  &__item {
+    flex: 0 0 auto;
+    width: 100%;
+
+    @media (min-width: 600px) {
+      width: 55%;
+    }
+
+    @media (min-width: $media-tablet-landscape) {
+      width: 30%;
+    }
+
+    @media (min-width: $media-desktop) {
+      width: calc(100% / 3);
+    }
+  }
+
+  &__name {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: calc(20 / 15);
+    margin: 0;
+    margin-bottom: 5px;
+
+    @media (min-width: $media-desktop) {
+      font-size: 18px;
+      line-height: calc(23 / 18);
+    }
+  }
+
+  &__rating {
+    margin-bottom: 14px;
+  }
+
+  &__star {
+    display: inline-block;
+    background-image: url("/img/orange-star.png");
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+  }
+
+  &__text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: calc(20 / 14);
+    margin: 0;
+    padding-right: 55px;
+
+    @media (min-width: $media-tablet) {
+      font-size: 15px;
+      line-height: calc(23 / 15);
+    }
+
+    @media (min-width: $media-desktop) {
+      padding-right: 85px;
+    }
+  }
+
+  &__link {
+    @media (min-width: $media-desktop) {
+      text-align: left;
+    }
+  }
+}
